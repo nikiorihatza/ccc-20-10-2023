@@ -9,7 +9,7 @@ import java.io.IOException;
 public class FileOperations {
     public void writeFile(String content, String filename) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/" + filename));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("D:\\OutsourcedIdeaProject\\ccc-20-10-2023\\src\\main\\java\\resources\\" + filename));
             writer.write(content);
             writer.close();
             System.out.println("File written successfully.");
