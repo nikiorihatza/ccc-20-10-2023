@@ -11,13 +11,13 @@ import java.util.TreeMap;
 public class Computer {
 
     public static void main(String[] args) {
-        compute();
+        compute("level1\\level1_1.in");
     }
 
-    public static void compute() {
+    public static void compute(String levelFile) {
         FileOperations fileOperations = new FileOperations();
 
-        var content = fileOperations.readFile(Path.of(".", "src", "main", "java", "resources", "level1_example.in").toAbsolutePath().toString());
+        var content = fileOperations.readFile(Path.of(".", "src", "main", "java", "resources", levelFile).toAbsolutePath().toString());
         var list = content.split("\n");
         Arrays.stream(list).toList().forEach(System.out::println);
         var outNumbers = new ArrayList<Integer>();
@@ -43,6 +43,6 @@ public class Computer {
                 outputBuffer.append(key + "  " + value);
             outputBuffer.append("\n");
         }
-        fileOperations.writeFile(outputBuffer.toString(), "level1\\test1.txt");
+        fileOperations.writeFile(outputBuffer.toString(), levelFile);
     }
 }
