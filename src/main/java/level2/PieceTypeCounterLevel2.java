@@ -7,7 +7,7 @@ import java.util.*;
 
 public class PieceTypeCounterLevel2 {
     public static void main(String[] args) {
-        String inputFileName = "src/main/resources/level2/level2_1.in";
+        String inputFileName = "src/main/resources/level2/level2_5.in";
 
         try (BufferedReader reader = new BufferedReader(new FileReader(inputFileName))) {
             int n = Integer.parseInt(reader.readLine());
