@@ -7,9 +7,9 @@ import java.io.FileWriter;
 import java.io.IOException;
 
 public class FileOperations {
-    public void writeFile(String content) {
+    public void writeFile(String content, String filename) {
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/output1.txt"));
+            BufferedWriter writer = new BufferedWriter(new FileWriter("src/main/resources/" + filename));
             writer.write(content);
             writer.close();
             System.out.println("File written successfully.");
